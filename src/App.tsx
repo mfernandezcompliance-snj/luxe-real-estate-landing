@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
@@ -12,11 +11,7 @@ import { FloatingCTA } from "@/components/site/FloatingCTA";
 import { CookieBanner } from "@/components/site/CookieBanner";
 import { useReveal } from "@/hooks/use-reveal";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-function Index() {
+export default function App() {
   useReveal();
   return (
     <main className="min-h-screen bg-background">
