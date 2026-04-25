@@ -2,6 +2,7 @@ import { Bed, Bath, Maximize, MapPin } from "lucide-react";
 import p1 from "@/assets/property-1.jpg";
 import p2 from "@/assets/property-2.jpg";
 import p3 from "@/assets/property-3.jpg";
+import p4 from "@/assets/property-4.jpg";
 
 type Property = {
   title: string;
@@ -44,6 +45,16 @@ const items: Property[] = [
     baths: 4,
     sqm: 310,
     tag: "Nuevo",
+  },
+  {
+    title: "Torre Marina Bay",
+    price: "$2,150,000",
+    location: "Cinta Costera, Ciudad de Panamá",
+    image: p4,
+    beds: 3,
+    baths: 4,
+    sqm: 350,
+    tag: "Frente al mar",
   },
 ];
 
