@@ -51,13 +51,13 @@ export function Footer() {
               Aviso de Operaciones: <span className="text-pearl/85">1553422-1-657892 DV 45</span>
             </p>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Panama+City%2C+Panama"
+              href="https://www.google.com/maps/search/?api=1&query=Calle+72+Este%2C+San+Francisco%2C+Ciudad+de+Panam%C3%A1%2C+Panam%C3%A1"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-xs text-pearl/70 transition-smooth hover:text-gold"
             >
               <MapPin size={14} className="text-gold" />
-              Ciudad de Panamá, Panamá — Ver en Google Maps
+              Calle 72 Este, San Francisco, Ciudad de Panamá — Ver en Google Maps
             </a>
           </div>
 
