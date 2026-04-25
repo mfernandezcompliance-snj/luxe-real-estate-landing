@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { LegalModal } from "./LegalModal";
 
 const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -50,6 +50,15 @@ export function Footer() {
             <p className="mt-4 text-xs text-pearl/60">
               Aviso de Operaciones: <span className="text-pearl/85">1553422-1-657892 DV 45</span>
             </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Panama+City%2C+Panama"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-xs text-pearl/70 transition-smooth hover:text-gold"
+            >
+              <MapPin size={14} className="text-gold" />
+              Ciudad de Panamá, Panamá — Ver en Google Maps
+            </a>
           </div>
 
           <div>
