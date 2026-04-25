@@ -140,6 +140,16 @@
     display: inline-block;
   }
 
+  /* Floating CTA glow */
+  .cta-glow {
+    background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--gold) 70%, transparent), transparent 70%);
+    animation: cta-pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes cta-pulse {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50%      { opacity: 0.85; transform: scale(1.06); }
+  }
+
   /* Scroll-reveal animation */
   .reveal {
     opacity: 0;
