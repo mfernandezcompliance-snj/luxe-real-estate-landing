@@ -3,10 +3,8 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#inicio", label: "Inicio" },
   { href: "#propiedades", label: "Propiedades" },
   { href: "#sobre-mi", label: "Sobre Mí" },
-  { href: "#contacto", label: "Contacto" },
 ];
 
 export function Header() {
