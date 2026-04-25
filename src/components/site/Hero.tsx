@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden"
     >
       <img
         src={heroImg}

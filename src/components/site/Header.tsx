@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,25 +10,10 @@ const links = [
 ];
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-smooth",
-        scrolled
-          ? "bg-navy/95 backdrop-blur-md shadow-elegant py-3"
-          : "bg-transparent py-6"
-      )}
-    >
+    <header className={cn("relative z-50 bg-navy py-5")}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="#inicio" className="group flex items-baseline gap-1">
           <span className="font-display text-2xl tracking-wide text-pearl">Sofía</span>

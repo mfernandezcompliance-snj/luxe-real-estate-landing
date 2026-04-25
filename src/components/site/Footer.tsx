@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Mail } from "lucide-react";
+import { LegalModal } from "./LegalModal";
 
 const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -27,7 +29,12 @@ const socials = [
   { Icon: Mail, href: "mailto:sofia@mendozaluxury.com", label: "Email" },
 ];
 
+type ModalKey = "privacy" | "terms" | "cookies" | null;
+
 export function Footer() {
+  const [modal, setModal] = useState<ModalKey>(null);
+  const close = () => setModal(null);
+
   return (
     <footer className="bg-navy text-pearl/80">
       <div className="mx-auto max-w-7xl px-6 py-16">
@@ -39,6 +46,9 @@ export function Footer() {
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
               Bienes raíces de lujo en Panamá. Asesoría exclusiva, discreta y personalizada.
+            </p>
+            <p className="mt-4 text-xs text-pearl/60">
+              Aviso de Operaciones: <span className="text-pearl/85">1553422-1-657892 DV 45</span>
             </p>
           </div>
 
@@ -75,16 +85,53 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs text-pearl/60 md:flex-row">
           <p>© {new Date().getFullYear()} Sofía Mendoza Luxury Real Estate. Todos los derechos reservados.</p>
-          <div className="flex gap-6">
-            <a href="#privacidad" className="hover:text-gold transition-smooth">
+          <div className="flex flex-wrap gap-6">
+            <button onClick={() => setModal("privacy")} className="hover:text-gold transition-smooth">
               Aviso de Privacidad
-            </a>
-            <a href="#terminos" className="hover:text-gold transition-smooth">
+            </button>
+            <button onClick={() => setModal("terms")} className="hover:text-gold transition-smooth">
               Términos y Condiciones
-            </a>
+            </button>
+            <button onClick={() => setModal("cookies")} className="hover:text-gold transition-smooth">
+              Política de Cookies
+            </button>
           </div>
         </div>
       </div>
+
+      <LegalModal open={modal === "privacy"} onClose={close} title="Aviso de Privacidad">
+        <p>
+          En <strong>Sofía Mendoza | Real Estate</strong>, valoramos su privacidad. Los datos
+          recopilados se utilizan exclusivamente para gestión inmobiliaria. Conforme a la
+          Ley 81 de Panamá, puede solicitar actualización o eliminación en{" "}
+          <a className="text-gold underline-offset-2 hover:underline" href="mailto:mfernandezcompliance@gmail.com">
+            mfernandezcompliance@gmail.com
+          </a>.
+        </p>
+      </LegalModal>
+
+      <LegalModal open={modal === "terms"} onClose={close} title="Términos y Condiciones">
+        <ol className="list-decimal space-y-3 pl-5">
+          <li><strong>Naturaleza:</strong> Contenido informativo.</li>
+          <li><strong>Responsabilidad:</strong> No nos hacemos responsables por cambios legales futuros.</li>
+          <li><strong>Propiedad:</strong> El cliente es dueño del diseño tras el pago.</li>
+          <li><strong>Jurisdicción:</strong> República de Panamá.</li>
+        </ol>
+      </LegalModal>
+
+      <LegalModal open={modal === "cookies"} onClose={close} title="Política de Cookies">
+        <ol className="list-decimal space-y-3 pl-5">
+          <li><strong>Definición:</strong> Usamos cookies para el funcionamiento técnico y análisis de red bajo arquitectura de alto rendimiento.</li>
+          <li><strong>Tipos:</strong> Técnicas (necesarias) y de Análisis.</li>
+          <li><strong>Gestión:</strong> Puede bloquearlas en su navegador, aunque afectará la funcionalidad.</li>
+          <li>
+            <strong>Contacto:</strong>{" "}
+            <a className="text-gold underline-offset-2 hover:underline" href="mailto:mfernandezcompliance@gmail.com">
+              mfernandezcompliance@gmail.com
+            </a>.
+          </li>
+        </ol>
+      </LegalModal>
     </footer>
   );
 }
