@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import path from "path";
 
 export default defineConfig({
-  base: './',
+  base: '/luxe-real-estate-landing/',
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   resolve: {
     alias: {
