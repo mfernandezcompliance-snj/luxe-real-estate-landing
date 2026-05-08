@@ -83,6 +83,15 @@ export function Header() {
           >
             Agendar cita
           </a>
+          <a
+            href="https://mfernandezcompliance.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="mt-2 inline-block border border-gold/60 px-5 py-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-gold"
+          >
+            Volver a MF WD&amp;C
+          </a>
         </nav>
       </div>
     </header>
