@@ -31,12 +31,22 @@ export function Header() {
           ))}
         </nav>
 
-        <a
-          href="#contacto"
-          className="hidden border border-gold/60 px-5 py-2 text-xs font-medium uppercase tracking-[0.2em] text-gold transition-smooth hover:bg-gold hover:text-navy md:inline-block"
-        >
-          Agendar cita
-        </a>
+        <div className="hidden items-center gap-4 md:flex">
+          <a
+            href="#contacto"
+            className="border border-gold/60 px-5 py-2 text-xs font-medium uppercase tracking-[0.2em] text-gold transition-smooth hover:bg-gold hover:text-navy"
+          >
+            Agendar cita
+          </a>
+          <a
+            href="https://mfernandezcompliance.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-gold/60 px-5 py-2 text-xs font-medium uppercase tracking-[0.2em] text-gold transition-smooth hover:bg-gold hover:text-navy"
+          >
+            Volver a MF WD&amp;C
+          </a>
+        </div>
 
         <button
           aria-label="Abrir menú"
