@@ -26,7 +26,7 @@ export function CookieBanner() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur-md shadow-elegant">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between">
         <p className="text-sm leading-relaxed text-foreground/85">
-          Utilizamos cookies para garantizar una experiencia de alto nivel. Cumplimos con la Ley 81 de 2019 de Protección de Datos de Panamá.
+          Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies.
         </p>
         <div className="flex shrink-0 gap-3">
           <button
